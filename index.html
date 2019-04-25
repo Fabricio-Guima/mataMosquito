@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        function iniciarJogo(){
+          let nivel = document.getElementById('nivel').value;
+
+           if(nivel === '') {
+               alert('SELECIONE UM NÍVEL');
+               return false
+           }
+
+           window.location.href = 'jogo.html?' + nivel;
+
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+               <img src="img/game.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <div class="mb-2">
+                        <select class="form-control" id="nivel">
+                            <option value="">-- Selecione o nível --</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Difícil</option>
+                            <option value="dantemustdie">Dant must die</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar jogo</button>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
